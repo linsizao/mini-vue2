@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+
+    <!-- 插值绑定 -->
+    <p>{{name}}</p>
+
+    <!-- 指令解析 -->
+    <p v-text="name"></p>
+
+    <!-- 双向绑定 -->
+    <input type="text" v-model="name" />
+
+    <!-- 事件绑定 -->
+    <button @click="changeName">按钮</button>
+
+    <!-- html解析 -->
+    <div v-html='html'></div>
+  </div>
+
+
+  <script src="compile.js"></script>
+  <script src="vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        name: 'BerniLin21',
+        html: '<button>按钮。。。</button>'
+      },
+
+      created() {
+        console.log('created')
+        setTimeout(() => {
+          this.name = '名字变啦'
+        }, 1000)
+      },
+
+      methods: {
+        changeName() {
+          this.name = '名字又变了'
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>

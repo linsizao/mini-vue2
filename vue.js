@@ -9,10 +9,12 @@ class Vue {
     this.observe(this.$data)
 
     // 模拟一下watch创建
-    new Watcher();
-    this.$data.test;
-    new Watcher();
-    this.$data.foo.bar
+    // new Watcher();
+    // this.$data.test;
+    // new Watcher();
+    // this.$data.foo.bar
+
+    new Compile(options.el, this)
 
   }
 
