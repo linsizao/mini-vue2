@@ -35,15 +35,53 @@
     Array.from(childNodes).forEach(node => {
       // 类型判断
       if (this.isElment(node)) { // 元素
-        console.log(node.nodeName, '编译元素')
+        // 查找 “v-”、“@”、“:”
+        console.log(node.nodeName, '编译元素' + node.nodeName)
+        const nodeAttrs = node.attributes
+        Array.from(nodeAttrs).forEach(attr => {
+          const attrName = attr.name  // 属性名
+          const attrValue = attr.value  // 属性值
+          if(this.isDirective(attrName)) {  // 指令v-
+            const dir = attrName.substring(2)
+            // 执行指令
+            this[dir] && this[dir](node, this.$vm, exp)
+          } else if (this.isEvent(attrName)) {  // 事件@
+
+          }
+
+        })
+
+        
       } else if (this.isInterpolation(node)) { // 文本
-        console.log(node.nodeName, '编译文本')
+        // console.log(node.nodeName, '编译文本')
+        this.compileText(node)
       }
 
       if ( node.childNodes && node.childNodes.length > 0 ){
         this.compile(node)
       }
     })
+   }
+
+   // 编译文本
+   compileText(node) {
+    //  console.log(RegExp.$1)
+    //  node.textContent = this.$vm.$data[RegExp.$1]
+     this.update(node, this.$vm, RegExp.$1, 'text')
+   }
+
+   update(node, vm, exp, dir) {
+    const updaterFun = this[dir + 'Updater']
+    // 初始化
+    updaterFun && updaterFun(node, vm[exp])
+    // 依赖收集
+     new Watcher(vm, exp, function (value) {
+       updaterFun && updaterFun(node, value)
+     })
+   }
+
+   textUpdater(node, value) {
+     node.textContent = value
    }
 
    // 
@@ -54,5 +92,16 @@
    // 插值文本
    isInterpolation(node) {
      return node.nodeType === 3 && /\{\{(.*)\}\}/.test(node.textContent)
+   }
+
+   // 编译元素判断
+   // 
+   isDirective(attr) {
+    return attr.indexOf('v-') === 0
+   }
+
+   // 
+   isEvent(attr) {
+    // return attr.indexOf('@')
    }
  }

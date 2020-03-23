@@ -1,0 +1,540 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+<meta name="description" content="让开会更简单，让沟通更高效">
+<meta name="keywords" content="Saas, 工具, Kuick, 开会，沟通，简单，高效，实时会议，方案讲解，文件评论，云计算">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+
+<link rel="shortcut icon" href="//deal.kuick.cn/image/icon/webIcon.ico" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//deal.kuick.cn/image/icon/icon72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//deal.kuick.cn/image/icon/icon144.png">
+
+
+<!--[if lte IE 9]>
+
+  <script src="//deal.kuick.cn/js/lib/es5-shim/es5-shim.js?v=1579088891227"></script>
+  <script src="//deal.kuick.cn/js/lib/json3/json3.js?v=1579088891227"></script>
+  <script src="//deal.kuick.cn/js/lib/html5shiv/html5shiv.js?v=1579088891227"></script>
+  <script src="//deal.kuick.cn/js/lib/ie8-shim.js?v=1579088891227"></script>
+  <script src="//deal.kuick.cn/js/lib/respond/respond.min.js?v=1579088891227"></script>
+<![endif]-->
+
+<script type="text/javascript" async="" src="https://deal.kuick.cn/link-sdk/v1/kuickdeallink-pc.min.js"></script><script type="text/javascript" async="" src="http://dn-growing.qbox.me/vds.js"></script><script>
+    apiURL = "https://deal.kuick.cn/api/v1.0";
+    webBaseURL = "https://deal.kuick.cn";
+    kuickWebURL = "https://meeting.kuick.cn";
+    
+    
+        userId = "";
+        userName = "BerniLin21";
+        userPhotoURL = "";
+    
+</script>
+
+<script type="text/javascript">
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+    _vds.push(['setAccountId', '59cccc317187497c97ee089aff248594']);
+    (function() {
+      var vds = document.createElement('script');
+      vds.type='text/javascript';
+      vds.async = true;
+      vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(vds, s);
+    })();
+    })();
+</script>
+
+
+    <script type="text/javascript" src="//deal.kuick.cn/js/lib/tingyun-browser/tingyun-rum.js"></script><title>WECHAT_EMPTY_TITLE</title><style id="__WXWORK_INNER_SCROLLBAR_CSS">::-webkit-scrollbar { width: 12px !important; height: 12px !important; }::-webkit-scrollbar-track:vertical {  }::-webkit-scrollbar-thumb:vertical { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } ::-webkit-scrollbar-track:horizontal {  }::-webkit-scrollbar-thumb:horizontal { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } ::-webkit-resizer { display: none !important; }</style>
+
+
+
+    <script src="//deal.kuick.cn/js/lib/ravenjs/raven.min.js?v=1579088891227"></script>
+    <script>
+        var ravenUrl = "";
+        if ('https:' == document.location.protocol) {
+            ravenUrl =  'https://bd5fa633855b4c7bb391e30a46da3944@sentry.kuick.cn:8443/15';
+        } else {
+            ravenUrl =  'http://bd5fa633855b4c7bb391e30a46da3944@sentry.kuick.cn/15';
+        }
+
+        Raven.config(ravenUrl, {}).install();
+
+        Raven.setUserContext({
+            userId: userId,
+            userName: userName,
+            userPhotoURL: userPhotoURL
+        });
+
+        console.old_error = console.error;
+        console.error = function(err) {
+            if (console.old_error) {
+                console.old_error(err);
+            } else {
+                console.log(err);
+            }
+            
+            Raven.captureException(err);
+        }
+    </script>
+
+
+    <title>开课吧服务号</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+
+    
+        <link rel="stylesheet" href="//deal.kuick.cn/js/linkview/article/main-build_ada912307d.css">
+    
+
+    <!-- 配置link js sdk -->
+<script type="text/javascript">
+    var _KDL = _KDL|| [];
+    window._KDL = _KDL;
+
+    window._open_id = "o7xuUuOneqJKFmCnBorOcn1O3Qh8";
+
+    (function(){
+        // var _dealProtocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        var _dealProtocol = "//";
+        var _sdkURL = "https://deal.kuick.cn" + '/link-sdk/v1/';
+        var fileType = "article"
+
+        // 适配kuick项目 start
+        var _kuickAppId = "";
+        var hostname    = document.location.hostname;
+
+        if (hostname == "deal-test.kuick.cn"
+                || hostname == "deal-dev.kuick.cn") {
+            _kuickAppId = 'e449db8a-d20a-434c-809b-3c8a71e278d0';
+        } else if (hostname == "deal-test2.kuick.cn") {
+            _kuickAppId = '5001f43b-938d-425d-a40d-4ffdd9d0fab5';
+        } else if (hostname == "deal-test3.kuick.cn") {
+            _kuickAppId = '2717e413-9ed2-4115-9e16-099e607164e4';
+        } else {
+            _kuickAppId = '4fc6e1e8-454d-4065-a6fd-68fee7a77b0d';
+        }
+
+        
+            if(_kuickAppId == '5d6526d7-3c9f-460b-b6cf-ba75397ce1ac') {
+                _KDL.push(['APP_USER_ID', ""]);
+                _KDL.push(['TITLE', ""]);
+                _KDL.push(['EMAIL', ""]);
+                _KDL.push(['PHONE', ""]);
+                _KDL.push(['COMPANY', ""]);
+            }
+        
+        // 适配kuick项目 end
+
+        _KDL.push(['SDK_URL', _sdkURL]);
+        _KDL.push(['KUICK_API_URL', 'https://deal.kuick.cn/kuick-api/v1.0']);
+        _KDL.push(['DEAL_API_URL', 'https://deal.kuick.cn/api/v1.0']);
+        if (fileType == "kuick_form") {
+            _KDL.push(['SOURCE', 'link_form']);
+        } else {
+            _KDL.push(['SOURCE', 'link']);
+        }
+        
+        _KDL.push(['LINK_ID', '14dbc47d-a567-4888-aa82-41e449c1f4de']);
+        _KDL.push(['PLATFORM', 'pc']);
+        _KDL.push(['OPEN_ID', "o7xuUuOneqJKFmCnBorOcn1O3Qh8"]);
+		_KDL.push(['UNION_ID', "oBB9pswMqxifPVNfy5MffPRNcWGw"]);
+        _KDL.push(['AVATAR', "http://thirdwx.qlogo.cn/mmopen/vi_32/sD0h4bGgWsnXiataSaibibdmsNqWxLGwz4p6m2StkmYQnLsliayCkbYhUUeDU5icRN2MmLCicfTZyCyEgiaWL43f7egLw/132"]);
+
+        
+            _KDL.push(['NAME', "BerniLin21"]);
+        
+
+        (function() {
+            var deal = document.createElement('script');
+            deal.type='text/javascript';
+            deal.async = true;
+            deal.src = _sdkURL + 'kuickdeallink-pc.min.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(deal, s);
+        })();
+
+    })();
+</script>
+<!-- 配置link js sdk -->
+
+<!--配置微信js sdk-->
+<script>
+    wx_config = {};
+
+    
+        var shareTitle = "Vue源码解析";
+        var shareLink = 'http://deal.kaikeba.com/link/14dbc47d-a567-4888-aa82-41e449c1f4de?share_token=Ao4i2TdC&amp;utm_source=%E5%BC%80%E8%AF%BE%E5%90%A7%E6%9C%8D%E5%8A%A1%E5%8F%B7';
+        var shareDesc = "李宝丰 分享资料给你啦，点击查看哦～";
+
+        wx_config = {
+            debug: false,
+            appId: 'wx5046bc7413796142',
+            timestamp: '1584945883',
+            nonceStr: '7a1f4bfd-b7df-41ef-b1bf-7d0e48aa7532',
+            signature: '3e92bdd3d1b425c5ba14ec87dcd7c717f8ce8b08',
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'onMenuShareQZone'
+            ]
+        };
+    
+</script>
+<!--配置微信js sdk end！-->
+
+
+    <script>
+        var linkId = '14dbc47d-a567-4888-aa82-41e449c1f4de';
+        var appId = '5d6526d7-3c9f-460b-b6cf-ba75397ce1ac';
+        var creatorId = '50108';
+        var isDirectional = '0';
+        var viewerUserId = '';
+        var viewerUserName = '';
+        var theDealUser = '';
+        var openid = '';
+        var fileId = '21095';
+        // 公总号id
+        var official_account_id = "0884d907-6230-47c2-b9cd-dad9eee5464d";
+        var article_url = "http://cdn-img-oss-prod.kuick.cn/file/upload/app/5d6526d7-3c9f-460b-b6cf-ba75397ce1ac/FsQA4VkSIM5s5GtlnAW.html";
+        var weChatProxy = "https://mp-weixin.kuick.cn";
+        // 跳转地址
+        var historyURL = "";
+        // 二维码地址
+        var qrcodeURL = "http://mmbiz.qpic.cn/mmbiz_jpg/OK6KODO8Cm99I8IhtlZvpY5T2lxvbwvibrDpSPdhkkvNkYFndypAf4xK3X7zcCz31APibB1cQIwPUWedPrTTmCGQ/0";
+
+        var first_img_url = "";
+        
+            first_img_url   = 'http://cdn-img.prod.kuick.cn/user/header/8cf7a944-3cca-4c84-9333-caaca2040961.jpg';
+        
+    </script>
+
+    <script>
+        // 覆盖sdk中的分享信息
+        var shareDesc = "Web全栈架构师深入Vue组件设计与开发";
+        var shareImgURL = "http://cdn-img.prod.kuick.cn/user/header/8cf7a944-3cca-4c84-9333-caaca2040961.jpg@1e_500w_500h_1c_0i_1o_1x";
+    </script>
+    <!--配置微信js sdk end！-->
+
+<script type="text/javascript" charset="utf-8" async="" src="https://deal.kuick.cn/link-sdk/v1/modules/kuick-deal-js-sdk-pc.fee0e74ab462824eaf55.js"></script><script type="text/javascript" charset="utf-8" async="" src="https://deal.kuick.cn/link-sdk/v1/modules/kda-applet.df990f765881f3bf57b6.js"></script><script type="text/javascript" charset="utf-8" async="" src="https://deal.kuick.cn/link-sdk/v1/third_party/kuick-deal-js-sdk/modules/kuickdeal-main.min.js"></script></head>
+<body>
+    <section class="article-container" id="articleContainer">
+
+        <header class="article-header-con">
+            <h3 class="article-title">Vue源码解析</h3>
+            <p class="meta_content">
+                <em class="time">2019-11-07</em>
+                <em class="author">邵一卉</em>
+                <em class="meta_nickname" id="meta_nickname">开课吧服务号</em>
+            </p>
+        </header>
+
+        <div class="article-body" id="content_div"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"><div id="js_article" class="rich_media"><div class="rich_media_inner"><div id="page-content" class="rich_media_area_primary"><div id="img-content"><div class="rich_media_content" id="js_content"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<div id="js_article" class="rich_media">
+	<div class="rich_media_inner">
+		<div id="page-content" class="rich_media_area_primary">
+			<div id="img-content">
+				<div class="rich_media_content" id="js_content">
+					<p>
+						<img src="https://img.kaikeba.com/15634289728159218" width="100%" class="predata-img"> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p style="text-align:left;">
+						<span style="color:#D99694;font-size:24px;"><strong style="color:#E5B9B7;"><span style="color:#D99694;">《Vue源码解析》视频教程</span></strong></span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="color:#D99694;"><strong style="color:#E5B9B7;"><span style="font-size:20px;"><br>
+</span></strong></span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="color:#D99694;"><strong style="color:#E5B9B7;"><span style="font-size:20px;"><img src="https://img.kaikeba.com/15634341757185721" width="23" class="predata-img" height="23" style="text-align:center;white-space:normal;width:23px;height:23px;"></span></strong></span> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p style="text-align:center;">
+						<span style="font-size:16px;background-color:#FBD5B5;color:#4BACC6;text-align:center;text-decoration:none;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;">哪些小伙伴适合观看学习呢？</span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#595959;"><span style="font-size:14px;font-family:宋体;">已经掌握</span>Vue基础，希望了解Vue原理的</span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="font-size:16px;background-color:#FBD5B5;color:#4BACC6;text-align:center;text-decoration:none;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;">看完视频你能收获什么？</span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="color:#595959;font-size:14px;font-family:宋体;">了解vue原理 手敲一个MVVM框架</span> 
+					</p>
+					<p>
+						<span style="color:#595959;font-size:14px;font-family:宋体;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="color:#595959;font-size:14px;font-family:宋体;"></span> 
+					</p>
+					<p style="white-space:normal;line-height:1.5em;text-align:center;">
+						<strong style="color:#E5B9B7;"><span style="font-size:20px;"><img src="https://img.kaikeba.com/15634341757185721" width="23" class="predata-img" height="23" style="width:23px;height:23px;"></span></strong> 
+					</p>
+					<p style="white-space:normal;line-height:1.5em;text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#FFFFFF;"><br>
+</span> 
+					</p>
+					<p style="white-space:normal;line-height:1.5em;text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"></span> 
+					</p>
+					<p style="white-space:normal;text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;">=<strong><span style="border:1px solid #000000;background-color:#FFC000;color:#FFFFFF;"><strong><span style="border:1px solid #000000;">课件下载地址</span></strong></span></strong>=</span> 
+					</p>
+					<p style="white-space:normal;text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p style="white-space:normal;text-align:left;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><a href="https://pan.baidu.com/s/17U_wp64SZHxt6TB399V_wg" target="_self" title="课件下载地址">https://pan.baidu.com/s/17U_wp64SZHxt6TB399V_wg</a><br>
+</span> 
+					</p>
+					<p style="white-space:normal;text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p style="white-space:normal;text-align:center;">
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="color:#191F25;font-family:&quot;Microsoft YaHei&quot;, &quot;Segoe UI&quot;, system-ui, Roboto, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, Tahoma, &quot;Segoe UI Symbol&quot;;font-size:14px;white-space:pre-wrap;background-color:#FFFFFF;">提取码：o9bi</span></span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="color:#595959;font-size:14px;font-family:宋体;"><br>
+</span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="color:#595959;font-size:14px;font-family:宋体;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="color:#595959;font-size:14px;font-family:宋体;"></span> 
+					</p>
+					<hr>
+					<p>
+						<span style="color:#595959;font-size:14px;font-family:宋体;"></span> 
+					</p>
+					<p style="text-align:center;">
+						<span style="color:#595959;font-size:14px;font-family:宋体;"><img src="https://img.baidu.com/hi/jx2/j_0046.gif"></span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"></span> 
+					</p>
+					<p>
+						<strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">1<span style="font-size:14px;font-family:宋体;">、</span><span style="font-size:14px;font-family:Calibri;">Vue</span><span style="font-size:14px;font-family:宋体;">工作机制概述</span></span></strong> 
+					</p>
+					<p>
+						<span style="font-family:宋体;font-size:14px;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="color:#595959;font-size:14px;font-family:宋体;">涉及知识点：defineProperty 发布订阅机制 编译器 虚拟Dom</span> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<video src="https://img.kaikeba.com/1.Vue%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6%E6%A6%82%E8%BF%B0.mp4" style="border:solid 1px" controls="" width="100%" preload="auto" x-webkit-airplay="allow" webkit-playsinline="" x5-playsinline=""></video>
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">2、数据响应式实现</span></strong> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"></span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#595959;">涉及知识点：defineProperty</span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#595959;"><br>
+</span> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<video src="https://img.kaikeba.com/2.%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F%E5%AE%9E%E7%8E%B0.mp4" style="border:solid 1px" controls="" width="100%" preload="auto" x-webkit-airplay="allow" webkit-playsinline="" x5-playsinline=""></video>
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">3、发布订阅模式实现</span></strong> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#595959;">涉及知识点：发布订阅模式</span> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<video src="https://img.kaikeba.com/3.%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0.mp4" style="border:solid 1px" controls="" width="100%" preload="auto" x-webkit-airplay="allow" webkit-playsinline="" x5-playsinline=""></video>
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">4</span></strong><strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">、编译器实现</span></strong> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#595959;">涉及知识点：MySQL优化器、索引覆盖、文件排序、ICP</span> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<video src="https://img.kaikeba.com/4.%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%9E%E7%8E%B0.mp4" style="border:solid 1px" controls="" width="100%" preload="auto" x-webkit-airplay="allow" webkit-playsinline="" x5-playsinline=""></video>
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">5、编译器依赖收</span></strong><strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">集</span></strong> 
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#595959;">涉及知识点：更新函数 插值文本 指令 事件处理</span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;">
+            <video src="https://img.kaikeba.com/5.%E7%BC%96%E8%AF%91%E5%99%A8%E4%BE%9D%E8%B5%96%E6%94%B6%E9%9B%86.mp4" style="border:solid 1px" controls="" width="100%" preload="auto" x-webkit-airplay="allow" webkit-playsinline="" x5-playsinline=""></video></span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p>
+						<strong><span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#4F81BD;">6、事件绑定</span></strong> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;color:#595959;">涉及知识点：双向数据绑定 事件绑定</span> 
+					</p>
+					<p>
+						<span style="font-family:宋体;font-size:14px;"><br>
+</span> 
+					</p>
+					<p>
+						<span style="font-size:14px;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"></span> 
+            <video src="https://img.kaikeba.com/6.%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A.mp4" style="border:solid 1px" controls="" width="100%" preload="auto" x-webkit-airplay="allow" webkit-playsinline="" x5-playsinline=""></video>
+					</p>
+					<p>
+						<br>
+					</p>
+					<hr>
+					<p>
+						<br>
+					</p>
+					<p style="text-indent:0em;white-space:normal;text-align:center;line-height:1.5em;">
+						<span style="color:#A5A5A5;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><img src="https://img.baidu.com/hi/jx2/j_0055.gif"></span> 
+					</p>
+					<p style="text-indent:0em;white-space:normal;text-align:center;line-height:1.5em;">
+						<span style="text-decoration-line:underline;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;">想要了解更多<span style="text-decoration-line:underline;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;font-size:20px;color:#4BACC6;"><strong>相关课程</strong></span>，快联系我们开课吧的课程咨询顾问哦~~</span> 
+					</p>
+					<p style="text-indent:0em;white-space:normal;text-align:center;line-height:1.5em;">
+						<span style="text-decoration-line:underline;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><br>
+</span> 
+					</p>
+					<p style="text-indent:0em;white-space:normal;text-align:center;line-height:1.5em;">
+						<span style="color:#A5A5A5;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;"><img src="https://img.kaikeba.com/15664584610524957" width="132px" class="predata-img" style="color:#A5A5A5;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;text-align:center;white-space:normal;"><span style="color:#A5A5A5;font-family:微软雅黑, &quot;Microsoft YaHei&quot;;text-align:center;"></span></span> 
+					</p>
+					<p>
+						<br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div></div></div></div></div></div>
+
+        <footer class="articke-footer-con" id="read_num">
+            <p class="read_num">
+                <em>阅读</em>
+                <em id="viewCount">3551</em>
+            </p>
+        </footer>
+    </section>
+
+    <!-- 二维码 -->
+    <section class="qr_code_pc" id="qr_code_pc">
+        <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="https://mp-weixin.kuick.cn/mmbiz_jpg/OK6KODO8Cm99I8IhtlZvpY5T2lxvbwvibrDpSPdhkkvNkYFndypAf4xK3X7zcCz31APibB1cQIwPUWedPrTTmCGQ/0">
+        <p>微信扫一扫<br>关注该公众号</p>
+    </section>
+
+    <!-- 二维码 -->
+    <section class="qr_code_mobile hide" id="qr_code_mobile">
+        <section class="pop_con">
+            <header class="header_img">
+                <img src="http://wx.qlogo.cn/mmopen/Tq4IDot94WUSwliaW5ibWCF3Zb9DwqkP25Jb0iaBVjldAibw4AMicO3K9hcepbJiagRTF8icGAtkWbA13MOQjYUSjuLmmAEQBE2VQsr/0" alt="">
+            </header>
+
+            <div class="close"></div>
+
+            <h3 class="nickName">开课吧服务号</h3>
+
+            <section class="qr_code_mobile_img_con">
+                <div class="border_con"></div>
+                <img class="qr_code_mobile_img" id="qr_code_mobile_img" src="https://mp-weixin.kuick.cn/mmbiz_jpg/OK6KODO8Cm99I8IhtlZvpY5T2lxvbwvibrDpSPdhkkvNkYFndypAf4xK3X7zcCz31APibB1cQIwPUWedPrTTmCGQ/0">
+            </section>
+
+            <p>识别图中二维码<br>关注公众号</p>
+        </section>
+    </section>
+
+
+    
+        <script src="//deal.kuick.cn/js/lib/vendor.bundle.pc.js"></script>
+        <script src="//deal.kuick.cn/js/linkview/article/main-build_e10362c3db.js"></script>
+    
+
+
+
+</body></html>

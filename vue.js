@@ -16,6 +16,11 @@ class Vue {
 
     new Compile(options.el, this)
 
+    // 执行 created
+    if(options.created) {
+      options.created.call(this)
+    }
+
   }
 
   observe(data) {
@@ -26,6 +31,8 @@ class Vue {
     // 遍历该对象
     Object.keys(data).forEach(key => {
       this.defineReactive(data, key, data[key])
+      // 代理data中的属性到vue实例上
+      this.proxyData(key)
     })
   }
 
@@ -52,6 +59,18 @@ class Vue {
     })
   }
 
+  // 代理data中的属性到vue实例上
+  proxyData(key) {
+    Object.defineProperty(this, key, {
+      get() {
+        return this.$data[key]
+      },
+      set(newVal) {
+        this.$data[key] = newVal
+      }
+    })
+  }
+
 }
 
 
@@ -74,12 +93,19 @@ class Dep {
 
 // Watcher
 class Watcher {
-  constructor() {
+  constructor(vm, key, cb) {
+    this.vm = vm
+    this.key = key
+    this.cb = cb
+
     // 将当前watch实例指定待Dep静态属性target
-    Dep.target = this;
+    Dep.target = this
+    this.vm[this.key] // 触发getter，添加依赖
+    Dep.target = null
   }
 
   update(){
     console.log('属性更新了')
+    this.cb.call(this.vm, this.vm[this.key])
   }
 }
