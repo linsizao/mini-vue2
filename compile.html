@@ -19,7 +19,7 @@
     <input type="text" v-model="name" />
 
     <!-- 事件绑定 -->
-    <button @click="changeName">按钮</button>
+    <button @click="changeName">修改按钮</button>
 
     <!-- html解析 -->
     <div v-html='html'></div>
@@ -33,7 +33,7 @@
       el: '#app',
       data: {
         name: 'BerniLin21',
-        html: '<button>按钮。。。</button>'
+        html: '<a href="#">我是个a标签。。。</a>'
       },
 
       created() {
@@ -45,7 +45,7 @@
 
       methods: {
         changeName() {
-          this.name = '名字又变了'
+          this.name = '名字点击变化'
         }
       }
     })
