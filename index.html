@@ -7,20 +7,48 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="app">
+
+    <!-- 插值绑定 -->
+    <p>{{name}}</p>
+
+    <!-- 指令解析 -->
+    <p v-text="name"></p>
+
+    <!-- 双向绑定 -->
+    <input type="text" v-model="name" />
+
+    <!-- 事件绑定 -->
+    <button @click="changeName">修改按钮</button>
+
+    <!-- html 解析 -->
+    <div v-html='html'></div>
+  </div>
+
+
+  <script src="compile.js"></script>
   <script src="vue.js"></script>
   <script>
     const app = new Vue({
+      el: '#app',
       data: {
-        test: 'Hellow World',
-        foo: {
-          bar: 'bar'
+        name: 'BerniLin21',
+        html: '<a href="#">我是个a标签。。。</a>'
+      },
+
+      created() {
+        console.log('created')
+        // setTimeout(() => {
+        //   this.name = '名字变啦'
+        // }, 1000)
+      },
+
+      methods: {
+        changeName() {
+          this.name = '名字点击变化'
         }
       }
-    });
-
-    app.$data.test = 'Hello BerniLin'
-    app.$data.foo.bar = 'oh my bar'
+    })
   </script>
 
 </body>

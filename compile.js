@@ -1,7 +1,8 @@
 /**
- * 
+ * 编译器
+ *  @param {*} el 元素
+ * @param {*} vm 指定 vue 实例
  */
-
 class Compile {
   constructor(el, vm) {
     // 要遍历的宿主节点
@@ -51,7 +52,7 @@ class Compile {
           }
         })
         
-      } else if (this.isInterpolation(node)) { // 文本
+      } else if (this.isInterpolation(node)) { // 插值文本 {{}}
         // console.log(node.nodeName, '编译文本')
         this.compileText(node)
       }
@@ -69,6 +70,13 @@ class Compile {
     this.update(node, this.$vm, RegExp.$1, 'text')
   }
 
+  /**
+   * 更新函数
+   * @param {*} node 更新的节点
+   * @param {*} vm vue的实例
+   * @param {*} exp 表达式
+   * @param {*} dir 指令
+   */
   update(node, vm, exp, dir) {
     const updaterFun = this[dir + 'Updater']
     // 初始化
@@ -111,7 +119,7 @@ class Compile {
 
   // v-model
   model(node, vm, exp) {
-    // 指定input的value属性
+    // 指定 input的 value 属性
     this.update(node, vm, exp, 'model')
 
     // 视图对模型的响应
@@ -120,23 +128,24 @@ class Compile {
     })
   }
 
-  // v-text方法
+  // v-text 方法
   textUpdater(node, value) {
     node.textContent = value
   }
 
-  // v-html方法
+  // v-html 方法
   htmlUpdater(node, value) {
     node.innerHTML = value
   }
 
-  // v-model方法
+  // v-model 方法
   modelUpdater(node, value) {
     node.value = value
   }
 
   // 事件处理器
   eventHandle(node, vm, exp, dir) {
+    // @click="funName"
     const fun = vm.$options.methods && vm.$options.methods[exp]
     if (dir && fun) { 
       node.addEventListener(dir, fun.bind(vm))

@@ -8,7 +8,7 @@ class Vue {
     this.$data = options.data
     this.observe(this.$data)
 
-    // 模拟一下watch创建
+    // 模拟一下 watch 创建
     // new Watcher();
     // this.$data.test;
     // new Watcher();
@@ -31,7 +31,7 @@ class Vue {
     // 遍历该对象
     Object.keys(data).forEach(key => {
       this.defineReactive(data, key, data[key])
-      // 代理data中的属性到vue实例上
+      // 代理 data 中的属性到 vue 实例上
       this.proxyData(key)
     })
   }
@@ -41,6 +41,7 @@ class Vue {
 
     this.observe(val) // 递归解决数据嵌套
 
+    // 初始化 dep
     const dep = new Dep()
 
     // 数据劫持
@@ -53,7 +54,7 @@ class Vue {
         if(newVal !== val){
           val = newVal
           // console.log(`${key}属性更新为：${val}`)
-          dep.notify()
+          dep.notify()  // 通知 watcher 去更新
         }
       }
     })
@@ -81,6 +82,7 @@ class Dep {
     this.deps = [];
   }
 
+  // 添加 watcher
   addDep(dep) {
     this.deps.push(dep)
   }
@@ -98,14 +100,14 @@ class Watcher {
     this.key = key
     this.cb = cb
 
-    // 将当前watch实例指定待Dep静态属性target
+    // 将当前 watch 实例指定待 Dep 静态属性 target
     Dep.target = this
-    this.vm[this.key] // 触发getter，添加依赖
-    Dep.target = null
+    this.vm[this.key] // 触发 getter，添加收集依赖
+    Dep.target = null // 避免重复添加
   }
 
   update(){
-    console.log('属性更新了')
+    // console.log('属性更新了')
     this.cb.call(this.vm, this.vm[this.key])
   }
 }
